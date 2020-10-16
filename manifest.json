@@ -1,0 +1,33 @@
+{   
+    "manifest_version": 2,
+    "name": "EcoleDirecte Moyennes",
+    "version": "1.2.1032",
+    "description": "Affiche les moyennes EcoleDirecte.",
+    "author": "Aknologia",
+    "default_locale": "fr",
+    "permissions": ["storage","tabs","https://*.ecoledirecte.com/Eleves/*/Notes"],
+    "background": {
+        "scripts": ["dist/scripts/background.js"],
+        "persistent": false
+    },
+    "content_scripts": [{
+        "css": ["dist/content.css"],
+        "js": ["dist/scripts/content.js"],
+        "matches": ["https://*.ecoledirecte.com/Eleves/*/Notes"]
+    }],
+    "browser_action": {
+        "default_icon": {
+            "16": "dist/images/icon-16.png",
+            "32": "dist/images/icon-32.png",
+            "48": "dist/images/icon-48.png",
+            "128": "dist/images/icon-128.png"
+        },
+        "default_popup": "dist/popup.html"
+    },
+    "icons": {
+        "16": "dist/images/icon-16.png",
+        "32": "dist/images/icon-32.png",
+        "48": "dist/images/icon-48.png",
+        "128": "dist/images/icon-128.png"
+    }
+}

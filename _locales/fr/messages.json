@@ -1,0 +1,10 @@
+{
+    "extName": {
+        "message": "EcoleDirecte Moyennes",
+        "description": "Chrome Extension Name."
+    },
+    "extDescription": {
+        "message": "Affiche les moyennes EcoleDirecte sur EcoleDirecte.com",
+        "description": "Chrome Extension Description."
+    }
+}
