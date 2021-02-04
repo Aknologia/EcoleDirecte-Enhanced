@@ -1,20 +1,27 @@
-{   
+{
     "manifest_version": 2,
-    "name": "EcoleDirecte Moyennes",
-    "version": "1.2.1032",
-    "description": "Affiche les moyennes EcoleDirecte.",
+    "name": "EcoleDirecte Enhanced",
+    "version": "1.4.3521",
+    "description": "Ajoute différentes options au site EcoleDirecte.com",
     "author": "Aknologia",
     "default_locale": "fr",
-    "permissions": ["storage","tabs","https://*.ecoledirecte.com/Eleves/*/Notes"],
+    "permissions": ["storage", "tabs", "https://*.ecoledirecte.com/*"],
     "background": {
         "scripts": ["dist/scripts/background.js"],
         "persistent": false
     },
-    "content_scripts": [{
-        "css": ["dist/content.css"],
-        "js": ["dist/scripts/content.js"],
-        "matches": ["https://*.ecoledirecte.com/Eleves/*/Notes"]
-    }],
+    "content_scripts": [
+        {
+            "css": ["dist/content.css"],
+            "js": ["dist/scripts/content.js"],
+            "matches": ["https://*.ecoledirecte.com/*"]
+        }
+    ],
+    "web_accessible_resources": [
+        "dist/scripts/features/average.js",
+        "dist/scripts/features/darktheme.js",
+        "dist/css/darktheme.css"
+    ],
     "browser_action": {
         "default_icon": {
             "16": "dist/images/icon-16.png",

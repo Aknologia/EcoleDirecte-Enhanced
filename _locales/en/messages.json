@@ -4,27 +4,27 @@
         "description": "Chrome Extension Name."
     },
     "extDescription": {
-        "message": "Ajoute différentes options au site EcoleDirecte.com",
+        "message": "Add different options to the EcoleDirecte.com website",
         "description": "Chrome Extension Description."
     },
     "popupTitle": {
-        "message": "Paramètres",
+        "message": "Settings",
         "description": "Title of the Settings' popup."
     },
     "active": {
-        "message": "Activé",
+        "message": "Active",
         "description": "Extension active."
     },
     "autorefresh": {
-        "message": "Actualisation Automatique",
+        "message": "Auto Refresh",
         "description": "Auto Refresh"
     },
     "average": {
-        "message": "Moyenne Personnelle",
+        "message": "Personal Average",
         "description": "Personal Average"
     },
     "darktheme": {
-        "message": "Thème Sombre",
+        "message": "Dark Theme",
         "description": "Dark Theme"
     }
 }

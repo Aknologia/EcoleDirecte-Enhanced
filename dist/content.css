@@ -1,3 +1,10 @@
 .text-italic {
     font-style: italic;
 }
+
+.text-black {
+    color: #000;
+}
+.text-bold {
+    font-weight: bolder;
+}

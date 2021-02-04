@@ -1,0 +1,178 @@
+/* Global */
+* {
+    scrollbar-color: #99aab5 #2c2f33 !important;
+}
+
+body {
+    background-color: #23272a;
+}
+
+h1,
+h2,
+h3 {
+    color: #7289da !important;
+}
+a,
+span,
+a:hover,
+span:hover,
+b,
+strong {
+    color: white !important;
+}
+
+.container-bg {
+    background: #2c2f33 !important;
+}
+
+/* Left Menu */
+
+#menu-part {
+    background: linear-gradient(#2c2f33, #99aab5);
+}
+
+.ed-menu {
+    background: linear-gradient(#2c2f33, #7289da);
+}
+
+div[style^="background: url('//d"]
+{
+    border: 2px solid white;
+}
+
+/* Top */
+
+#item-compteUtilisateur,
+#item-deconnexion {
+    background-color: transparent !important;
+}
+
+#user-account-link {
+    background: #7289da !important;
+}
+
+.navbar {
+    background: #2c2f33 !important;
+}
+
+/* Dashboard */
+.col-md-12 {
+    color: #ffffff !important;
+}
+
+#nom-etb {
+    box-shadow: 0 0 5px 3px #1a1d1f !important;
+}
+
+.accueiluserauth .separator {
+    box-shadow: -5px 0 5px -4px #1a1d1f !important;
+}
+
+.btn-primary {
+    background-color: #7289da !important;
+}
+.btn-primary:hover {
+    background-color: #576aaf !important;
+}
+
+/* Agenda */
+.dhx_scale_hour,
+.dhx_scale_bar {
+    color: #7289da !important;
+    background-color: #2c2f33 !important;
+    border-color: #99aab5 !important;
+}
+
+.dhx_cal_prev_button {
+    color: white !important;
+}
+
+.dhx_scale_holder_now {
+    background-color: #99aab5 !important;
+}
+
+.tooltip {
+    background-color: #2c2f33 !important;
+    color: #99aab5 !important;
+}
+
+/* Timeline */
+
+.qa-message-content {
+    color: #99aab5 !important;
+}
+
+/* Vie Scolaire */
+
+.ed-table th {
+    background: #7289da !important;
+}
+
+.ed-table td {
+    color: white !important;
+}
+
+.panel {
+    background: #7289da !important;
+    color: white !important;
+}
+.panel-title {
+    color: white !important;
+}
+
+/* Notes */
+.newNote {
+    border-bottom: 1px solid #7289da !important;
+}
+
+.modal-content {
+    background: #99aab5 !important;
+}
+
+tr[style='background-color: rgb(235, 235, 235);'],
+.groupematiere {
+    background-color: #3f4347 !important;
+}
+
+.bloc-legende td {
+    color: white !important;
+}
+
+.btn-default:hover {
+    color: #7289da !important;
+}
+
+.btn-default:not(.active):hover {
+    background: #99aab5 !important;
+}
+
+li[ng-repeat^='periode']:not(.hidden-print) {
+    background: #7289da !important;
+}
+
+li[ng-repeat^='periode']:not(.active):hover {
+    background: #3f4347 !important;
+}
+
+/* Login */
+#connexion {
+    background-color: #7289da !important;
+    border-color: #7289da !important;
+}
+
+#pb-connexion {
+    background-color: #7289da !important;
+}
+
+.info-container {
+    background: linear-gradient(#23272a, #99aab5) !important;
+}
+
+/* Footer */
+.footer .hidden-xs a {
+    background: #7289da !important;
+}
+
+.footer li a {
+    background: #7289da !important;
+}
