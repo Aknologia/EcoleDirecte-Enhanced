@@ -8,6 +8,8 @@
     --darktheme-shadow: #1a1d1f;
     --darktheme-lfont: white;
     --darktheme-important: #3f4347;
+    --darktheme-databg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAsCAYAAACkJ9JhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAdSURBVBhXY7B3dv/PxAAENCYY/gMB/WybuWrrfwAr7QrUUuBtLgAAAABJRU5ErkJggg==');
+    --darktheme-databg_now: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAsCAYAAACkJ9JhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAkSURBVBhXYyjqvPWfiQEIaEww/AcC5s9c0Q04lVCTUFe8zQAAFXAKId+e/vcAAAAASUVORK5CYII=');
 }
 
 /* Global */
@@ -118,6 +120,54 @@ div.dhtmlXTooltip {
     color: var(--darktheme-light) !important;
 }
 
+.dhx_cal_date,
+.dhx_cal_today_button,
+.dhx_cal_tab {
+    color: var(--darktheme-lfont) !important;
+}
+
+.dhx_cal_tab.active {
+    color: var(--darktheme-dark) !important;
+}
+
+td:not(.dhx_now) div.dhx_month_head {
+    background: var(--darktheme-shadow) !important;
+    color: var(--darktheme-lfont) !important;
+}
+
+td:not(.dhx_now) div.dhx_month_body {
+    background: var(--darktheme-important) !important;
+}
+
+.dhx_now div.dhx_month_head {
+    background: var(--darktheme-hover) !important;
+    color: var(--darktheme-lfont) !important;
+}
+
+.dhx_now div.dhx_month_body {
+    background: var(--darktheme-focus) !important;
+}
+
+.checkmark {
+    border: 1px solid var(--darktheme-lfont) !important;
+}
+
+.dhx_cal_event_clear {
+    border: 1px solid var(--darktheme-lfont) !important;
+}
+
+.dhx_scale_holder {
+    background-image: var(--darktheme-databg) !important;
+}
+
+.dhx_scale_holder_now {
+    background-image: var(--darktheme-databg_now) !important;
+}
+
+.dhx_cal_event {
+    border: 1px var(--darktheme-lfont) !important;
+}
+
 /* Timeline */
 
 .qa-message-content {
@@ -176,6 +226,23 @@ li[ng-repeat^='periode']:not(.hidden-print) {
 }
 
 li[ng-repeat^='periode']:not(.active):hover {
+    background: var(--darktheme-important) !important;
+}
+
+.nav-tabs > li.active > a {
+    color: var(--darktheme-dark) !important;
+}
+
+.nav-tabs > li:not(.active) > a:hover {
+    color: var(--darktheme-dark) !important;
+}
+
+button.btn-default.active,
+button.btn-default.active span {
+    color: var(--darktheme-focus) !important;
+}
+
+.eleve-note .table.relevemoyenne > tbody > tr.groupematiere > td {
     background: var(--darktheme-important) !important;
 }
 
@@ -243,7 +310,7 @@ li[ng-repeat^='periode']:not(.active):hover {
     background: var(--darktheme-focus) !important;
 }
 
-.cahierdetexte .nav-tabs>li.active {
+.cahierdetexte .nav-tabs > li.active {
     border-color: var(--darktheme-light) !important;
 }
 
@@ -256,12 +323,11 @@ li[ng-repeat^='periode']:not(.active):hover {
     background: var(--darktheme-light) !important;
 }
 
-
 /* Footer */
 .footer .hidden-xs a {
     background: var(--darktheme-focus) !important;
 }
 
-.footer li:not([ng-repeat*="documents"]) a {
+.footer li:not([ng-repeat*='documents']) a {
     background: var(--darktheme-focus) !important;
 }
