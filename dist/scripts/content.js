@@ -6,11 +6,13 @@ chrome.storage.sync.get('ecoledirecte_active', function (data) {
 const FEATURES = ['average', 'darktheme'];
 
 function load() {
+    addEnv();
     FEATURES.forEach((feature) => {
         chrome.storage.sync.get(`ecoledirecte_settings`, function (data) {
             if (data[`ecoledirecte_settings`][feature]) addScript(feature);
         });
     });
+    console.log('[EcoleDirecte Enhanced] Loaded Modules');
 }
 
 function addScript(name) {
@@ -25,4 +27,16 @@ function addScript(name) {
         document.getElementsByTagName('head')[0] ||
         document.documentElement;
     head.insertBefore(script, head.lastChild);
+}
+
+function addEnv() {
+    let extID = document.createElement('meta');
+    extID.name = 'extID';
+    extID.content = chrome.runtime.id;
+    const head =
+        document.head ||
+        document.getElementsByTagName('head')[0] ||
+        document.documentElement;
+    head.appendChild(extID);
+    console.log('[EcoleDirecte Enhanced] Loaded .env Variables');
 }

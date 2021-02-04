@@ -74,7 +74,3 @@ function loadBasic() {
         if (data[`ecoledirecte_autorefresh`]) autorefresh.checked = true;
     });
 }
-
-function getURL(path) {
-    return chrome.extension.getURL(path);
-}

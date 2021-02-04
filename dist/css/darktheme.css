@@ -1,16 +1,28 @@
+/* Color Palette */
+:root {
+    --darktheme-focus: #7289da;
+    --darktheme-hover: #576aaf;
+    --darktheme-light: #99aab5;
+    --darktheme-ldark: #2c2f33;
+    --darktheme-dark: #23272a;
+    --darktheme-shadow: #1a1d1f;
+    --darktheme-lfont: white;
+    --darktheme-important: #3f4347;
+}
+
 /* Global */
 * {
-    scrollbar-color: #99aab5 #2c2f33 !important;
+    scrollbar-color: var(--darktheme-light) var(--darktheme-ldark) !important;
 }
 
 body {
-    background-color: #23272a;
+    background-color: var(--darktheme-dark);
 }
 
 h1,
 h2,
 h3 {
-    color: #7289da !important;
+    color: var(--darktheme-focus) !important;
 }
 a,
 span,
@@ -18,26 +30,26 @@ a:hover,
 span:hover,
 b,
 strong {
-    color: white !important;
+    color: var(--darktheme-lfont) !important;
 }
 
 .container-bg {
-    background: #2c2f33 !important;
+    background: var(--darktheme-ldark) !important;
 }
 
 /* Left Menu */
 
 #menu-part {
-    background: linear-gradient(#2c2f33, #99aab5);
+    background: linear-gradient(var(--darktheme-ldark), var(--darktheme-light));
 }
 
 .ed-menu {
-    background: linear-gradient(#2c2f33, #7289da);
+    background: linear-gradient(var(--darktheme-ldark), var(--darktheme-focus));
 }
 
 div[style^="background: url('//d"]
 {
-    border: 2px solid white;
+    border: 2px solid var(--darktheme-lfont);
 }
 
 /* Top */
@@ -48,131 +60,143 @@ div[style^="background: url('//d"]
 }
 
 #user-account-link {
-    background: #7289da !important;
+    background: var(--darktheme-focus) !important;
 }
 
 .navbar {
-    background: #2c2f33 !important;
+    background: var(--darktheme-ldark) !important;
 }
 
 /* Dashboard */
 .col-md-12 {
-    color: #ffffff !important;
+    color: var(--darktheme-lfont) !important;
 }
 
 #nom-etb {
-    box-shadow: 0 0 5px 3px #1a1d1f !important;
+    box-shadow: 0 0 5px 3px var(--darktheme-shadow) !important;
 }
 
 .accueiluserauth .separator {
-    box-shadow: -5px 0 5px -4px #1a1d1f !important;
+    box-shadow: -5px 0 5px -4px var(--darktheme-shadow) !important;
 }
 
 .btn-primary {
-    background-color: #7289da !important;
+    background-color: var(--darktheme-focus) !important;
 }
 .btn-primary:hover {
-    background-color: #576aaf !important;
+    background-color: var(--darktheme-hover) !important;
 }
 
 /* Agenda */
 .dhx_scale_hour,
 .dhx_scale_bar {
-    color: #7289da !important;
-    background-color: #2c2f33 !important;
-    border-color: #99aab5 !important;
+    color: var(--darktheme-focus) !important;
+    background-color: var(--darktheme-ldark) !important;
+    border-color: var(--darktheme-light) !important;
 }
 
 .dhx_cal_prev_button {
-    color: white !important;
+    color: var(--darktheme-lfont) !important;
 }
 
 .dhx_scale_holder_now {
-    background-color: #99aab5 !important;
+    background-color: var(--darktheme-light) !important;
 }
 
 .tooltip {
-    background-color: #2c2f33 !important;
-    color: #99aab5 !important;
+    background-color: var(--darktheme-ldark) !important;
+    color: var(--darktheme-light) !important;
 }
 
 /* Timeline */
 
 .qa-message-content {
-    color: #99aab5 !important;
+    color: var(--darktheme-light) !important;
 }
 
 /* Vie Scolaire */
 
 .ed-table th {
-    background: #7289da !important;
+    background: var(--darktheme-focus) !important;
 }
 
 .ed-table td {
-    color: white !important;
+    color: var(--darktheme-lfont) !important;
 }
 
 .panel {
-    background: #7289da !important;
-    color: white !important;
+    background: var(--darktheme-focus) !important;
+    color: var(--darktheme-lfont) !important;
 }
 .panel-title {
-    color: white !important;
+    color: var(--darktheme-lfont) !important;
 }
 
 /* Notes */
 .newNote {
-    border-bottom: 1px solid #7289da !important;
+    border-bottom: 1px solid var(--darktheme-focus) !important;
 }
 
 .modal-content {
-    background: #99aab5 !important;
+    background: var(--darktheme-light) !important;
 }
 
 tr[style='background-color: rgb(235, 235, 235);'],
 .groupematiere {
-    background-color: #3f4347 !important;
+    background-color: var(--darktheme-important) !important;
 }
 
 .bloc-legende td {
-    color: white !important;
+    color: var(--darktheme-lfont) !important;
 }
 
 .btn-default:hover {
-    color: #7289da !important;
+    color: var(--darktheme-focus) !important;
 }
 
+.btn-default:not(.active) {
+    color: var(--darktheme-lfont) !important;
+}
 .btn-default:not(.active):hover {
-    background: #99aab5 !important;
+    background: var(--darktheme-light) !important;
 }
 
 li[ng-repeat^='periode']:not(.hidden-print) {
-    background: #7289da !important;
+    background: var(--darktheme-focus) !important;
 }
 
 li[ng-repeat^='periode']:not(.active):hover {
-    background: #3f4347 !important;
+    background: var(--darktheme-important) !important;
 }
 
 /* Login */
 #connexion {
-    background-color: #7289da !important;
-    border-color: #7289da !important;
+    background-color: var(--darktheme-focus) !important;
+    border-color: var(--darktheme-focus) !important;
 }
 
 #pb-connexion {
-    background-color: #7289da !important;
+    background-color: var(--darktheme-focus) !important;
 }
 
 .info-container {
-    background: linear-gradient(#23272a, #99aab5) !important;
+    background: linear-gradient(
+        var(--darktheme-dark),
+        var(--darktheme-light)
+    ) !important;
+}
+
+/* Work */
+
+.ed-card {
+    background-color: var(--darktheme-ldark) !important;
 }
 
 /* Footer */
 .footer .hidden-xs a {
-    background: #7289da !important;
+    background: var(--darktheme-focus) !important;
 }
 
 .footer li a {
-    background: #7289da !important;
+    background: var(--darktheme-focus) !important;
 }

@@ -4,8 +4,20 @@ setTimeout(() => {
     style.setAttribute('type', 'text/css');
     style.setAttribute(
         'href',
-        'chrome-extension://{{EXT_ID}}/dist/css/darktheme.css'
+        `chrome-extension://${getMeta('extID')}/dist/css/darktheme.css`
     );
     document.getElementsByTagName('head')[0].append(style);
     console.log('[EcoleDirecte Enhanced] Loaded DarkTheme');
 }, 500);
+
+function getMeta(metaName) {
+    const metas = document.getElementsByTagName('meta');
+
+    for (let i = 0; i < metas.length; i++) {
+        if (metas[i].getAttribute('name') === metaName) {
+            return metas[i].getAttribute('content');
+        }
+    }
+
+    return '';
+}
