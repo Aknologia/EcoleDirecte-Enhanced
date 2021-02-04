@@ -21,16 +21,26 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
     color: var(--darktheme-focus) !important;
 }
 a,
-span,
 a:hover,
+label,
+label:hover,
+span,
 span:hover,
+p,
+p:hover,
 b,
 strong {
     color: var(--darktheme-lfont) !important;
+}
+
+em {
+    color: var(--darktheme-light) !important;
 }
 
 .container-bg {
@@ -103,7 +113,7 @@ div[style^="background: url('//d"]
     background-color: var(--darktheme-light) !important;
 }
 
-.tooltip {
+div.dhtmlXTooltip {
     background-color: var(--darktheme-ldark) !important;
     color: var(--darktheme-light) !important;
 }
@@ -192,11 +202,66 @@ li[ng-repeat^='periode']:not(.active):hover {
     background-color: var(--darktheme-ldark) !important;
 }
 
+.cdtnavigation {
+    background-color: var(--darktheme-focus) !important;
+    color: var(--darktheme-lfont) !important;
+}
+
+.list-group-item {
+    border-color: var(--darktheme-lfont) !important;
+}
+.list-group-item:hover {
+    background: var(--darktheme-hover) !important;
+}
+
+.picker-day {
+    background: var(--darktheme-light) !important;
+    color: var(--darktheme-lfont) !important;
+}
+
+.picker-day:hover {
+    background: var(--darktheme-important) !important;
+}
+
+.cahierdetexte li.onglet-jour a {
+    background: var(--darktheme-focus) !important;
+}
+
+.cahierdetexte li.onglet-jour a:hover {
+    background: var(--darktheme-hover) !important;
+}
+
+.text-danger {
+    color: var(--darktheme-focus) !important;
+}
+
+.pull-right {
+    color: var(--darktheme-light) !important;
+}
+
+.width-epingle::before {
+    background: var(--darktheme-focus) !important;
+}
+
+.cahierdetexte .nav-tabs>li.active {
+    border-color: var(--darktheme-light) !important;
+}
+
+.cahierdetexte li.onglet-secondary.active a {
+    background: var(--darktheme-important) !important;
+    border: 1px solid var(--darktheme-lfont) !important;
+}
+
+.cahierdetexte li.onglet-secondary:not(.active) a {
+    background: var(--darktheme-light) !important;
+}
+
+
 /* Footer */
 .footer .hidden-xs a {
     background: var(--darktheme-focus) !important;
 }
 
-.footer li a {
+.footer li:not([ng-repeat*="documents"]) a {
     background: var(--darktheme-focus) !important;
 }
