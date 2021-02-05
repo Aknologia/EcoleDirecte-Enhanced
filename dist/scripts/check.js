@@ -1,20 +1,24 @@
 document.addEventListener('DOMContentLoaded', onInit, false);
-const FEATURES = ['average', 'darktheme'];
 
 function onInit() {
     loadBasic();
-    let container = document.getElementById('container');
-    let elem = document.getElementById('features');
-    FEATURES.forEach((feature) => {
+    let container = document.getElementById('features');
+    console.log(features);
+    Object.keys(features).forEach((feature) => {
+        let obj = features[feature];
+
         let label = document.createElement('label');
         let input = document.createElement('input');
+
         input.setAttribute('type', 'checkbox');
         input.id = feature;
+
         label.append(input);
         label.append(' ' + chrome.i18n.getMessage(feature));
-        container.insertBefore(label, elem.nextSibling);
-        elem = label;
+
+        container.append(label);
         input.addEventListener('click', (e) => handleCheckbox(e.target));
+
         chrome.storage.sync.get([`ecoledirecte_settings`], function (data) {
             if (data[`ecoledirecte_settings`][feature]) input.checked = true;
         });
@@ -30,15 +34,14 @@ function handleCheckbox(cb) {
     chrome.storage.sync.get([`ecoledirecte_settings`], function (data) {
         let obj = data.ecoledirecte_settings;
         obj[cb.id] = check(cb);
-        console.log(obj);
         chrome.storage.sync.set({ ecoledirecte_settings: obj });
         reloadTab();
     });
 }
 
 function reloadTab() {
-    chrome.storage.sync.get(['ecoledirecte_autorefresh'], function (data) {
-        if (data.ecoledirecte_autorefresh) {
+    chrome.storage.sync.get(['ecoledirecte_settings'], function (data) {
+        if (data.ecoledirecte_settings.autorefresh) {
             chrome.tabs.query(
                 { active: true, lastFocusedWindow: true },
                 (tabs) => {
@@ -65,12 +68,20 @@ function loadBasic() {
 
     let active = document.getElementById('active');
     active.parentElement.append(chrome.i18n.getMessage('active'));
-    chrome.storage.sync.get([`ecoledirecte_active`], function (data) {
-        if (data[`ecoledirecte_active`]) active.checked = true;
+    active.addEventListener('click', (e) => handleCheckbox(e.target));
+    chrome.storage.sync.get([`ecoledirecte_settings`], function (data) {
+        if (data.ecoledirecte_settings.active) active.checked = true;
     });
+
     let autorefresh = document.getElementById('autorefresh');
     autorefresh.parentElement.append(chrome.i18n.getMessage('autorefresh'));
-    chrome.storage.sync.get([`ecoledirecte_autorefresh`], function (data) {
-        if (data[`ecoledirecte_autorefresh`]) autorefresh.checked = true;
+    autorefresh.addEventListener('click', (e) => handleCheckbox(e.target));
+    chrome.storage.sync.get([`ecoledirecte_settings`], function (data) {
+        if (data.ecoledirecte_settings.autorefresh) autorefresh.checked = true;
     });
 }
+
+let features = {
+    average: {},
+    darktheme: {},
+};

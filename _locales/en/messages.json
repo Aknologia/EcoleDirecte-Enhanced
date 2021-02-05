@@ -12,7 +12,7 @@
         "description": "Title of the Settings' popup."
     },
     "active": {
-        "message": "Active",
+        "message": "Enabled",
         "description": "Extension active."
     },
     "autorefresh": {

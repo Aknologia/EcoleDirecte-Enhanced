@@ -3,7 +3,7 @@ body {
     width: 300px;
     margin: 0;
     opacity: 0;
-    animation: fadein 0.25s normal forwards ease-in-out;
+    animation: fadein 0.2s normal forwards ease-in-out;
     animation-iteration-count: 1;
     background-color: #2c2f33;
 }
@@ -26,8 +26,8 @@ form {
 
 #container *:not(h1) {
     opacity: 0;
-    animation: fadein 1s normal forwards ease-in-out;
-    animation-delay: 0.2s;
+    animation: fadein 0.15s normal forwards ease-in-out;
+    animation-delay: 0.1s;
     animation-iteration-count: 1;
 }
 
@@ -36,8 +36,8 @@ h1 {
     font-weight: bolder;
     color: #fff;
     opacity: 0;
-    animation: fadein 1s normal forwards ease-in-out;
-    animation-delay: 0.1s;
+    animation: fadein 0.15s normal forwards ease-in-out;
+    animation-delay: 0.05s;
     animation-iteration-count: 1;
 }
 
@@ -59,11 +59,35 @@ input[type='checkbox'] {
     color: #fff;
 }
 
-label:nth-of-type(1),
-label:nth-of-type(2) {
+#global label {
     color: #fff;
 }
-label:not(label:nth-of-type(1), label:nth-of-type(2)) {
+
+#global,
+#features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#global::before {
+    content: 'Global';
+}
+
+#features::before {
+    content: 'Options';
+}
+
+#global::before,
+#features::before {
+    font-size: large;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+#features label {
     color: #99aab5;
 }
 

@@ -3,11 +3,14 @@ chrome.storage.sync.get('ecoledirecte_active', function (data) {
         document.addEventListener('DOMContentLoaded', load());
 });
 
-const FEATURES = ['average', 'darktheme'];
+let features = {
+    average: {},
+    darktheme: {},
+};
 
 function load() {
     addEnv();
-    FEATURES.forEach((feature) => {
+    Object.keys(features).forEach((feature) => {
         chrome.storage.sync.get(`ecoledirecte_settings`, function (data) {
             if (data[`ecoledirecte_settings`][feature]) addScript(feature);
         });
