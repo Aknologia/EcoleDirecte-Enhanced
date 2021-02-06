@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "EcoleDirecte Enhanced",
-    "version": "1.5.2591",
-    "description": "Ajoute différentes options au site EcoleDirecte.com",
+    "version": "1.5.2592",
+    "description": "Ajoute différentes options au site EcoleDirecte.com. | Options disponibles dans le menu popup de l'extension.",
     "author": "Aknologia",
     "default_locale": "fr",
     "permissions": [
