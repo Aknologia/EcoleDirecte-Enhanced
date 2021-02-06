@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "EcoleDirecte Enhanced",
-    "version": "1.4.3521",
+    "version": "1.5.2591",
     "description": "Ajoute différentes options au site EcoleDirecte.com",
     "author": "Aknologia",
     "default_locale": "fr",
