@@ -91,6 +91,27 @@ input[type='checkbox'] {
     color: #99aab5;
 }
 
+#features label[data-beta]::after {
+    content: 'BETA';
+    margin-left: 5px;
+    font-style: italic;
+    color: #7289da;
+}
+
+#features {
+    list-style: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+label[data-selectall] {
+    position: absolute;
+    color: white;
+    top: 150px;
+    left: 180px;
+}
+
 /* Keyframes */
 @keyframes fadein {
     from {

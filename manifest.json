@@ -5,19 +5,30 @@
     "description": "Ajoute différentes options au site EcoleDirecte.com",
     "author": "Aknologia",
     "default_locale": "fr",
-    "permissions": ["storage", "tabs", "https://*.ecoledirecte.com/*"],
+    "permissions": [
+        "storage",
+        "tabs",
+        "https://*.ecoledirecte.com/*",
+        "webRequest",
+        "webRequestBlocking"
+    ],
     "background": {
         "scripts": ["dist/scripts/background.js"],
-        "persistent": false
+        "persistent": true
     },
     "content_scripts": [
         {
-            "css": ["dist/content.css"],
+            "js": ["dist/scripts/requests.js"],
+            "run_at": "document_start",
+            "matches": ["https://*.ecoledirecte.com/*"]
+        },
+        {
             "js": ["dist/scripts/content.js"],
             "matches": ["https://*.ecoledirecte.com/*"]
         }
     ],
     "web_accessible_resources": [
+        "dist/scripts/features/requests_script.js",
         "dist/scripts/features/average.js",
         "dist/scripts/features/darktheme.js",
         "dist/css/darktheme.css"

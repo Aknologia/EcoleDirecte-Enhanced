@@ -1,10 +1,8 @@
-chrome.storage.sync.get('ecoledirecte_active', function (data) {
-    if (data.ecoledirecte_active)
-        document.addEventListener('DOMContentLoaded', load());
+chrome.storage.sync.get('ecoledirecte_settings', function (data) {
+    if (data.ecoledirecte_settings.active) load();
 });
 
 let features = {
-    average: {},
     darktheme: {},
 };
 
@@ -19,7 +17,7 @@ function load() {
 }
 
 function addScript(name) {
-    const script = document.createElement('script');
+    let script = document.createElement('script');
     script.setAttribute('type', 'module');
     script.setAttribute(
         'src',

@@ -19,6 +19,10 @@
         "message": "Actualisation Automatique",
         "description": "Auto Refresh"
     },
+    "selectall": {
+        "message": "Tout Sélectionner",
+        "description": "Select All Checkboxes"
+    },
     "average": {
         "message": "Moyenne Personnelle",
         "description": "Personal Average"
@@ -26,5 +30,33 @@
     "darktheme": {
         "message": "Thème Sombre",
         "description": "Dark Theme"
+    },
+    "ranks": {
+        "message": "Rangs",
+        "description": "Student Ranks"
+    },
+    "appreciation": {
+        "message": "Appréciations",
+        "description": "Student Appreciations / Mentions"
+    },
+    "graphiques": {
+        "message": "Graphiques",
+        "description": "Average Charts"
+    },
+    "notes": {
+        "message": "Moyenne Annuelle",
+        "description": "Grades Options"
+    },
+    "competences": {
+        "message": "Compétences",
+        "description": "Student Skills"
+    },
+    "coefficients": {
+        "message": "Coefficients",
+        "description": "Grade Rate"
+    },
+    "devoirs": {
+        "message": "Devoirs",
+        "description": "Test Grades"
     }
 }

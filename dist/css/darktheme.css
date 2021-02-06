@@ -246,6 +246,11 @@ button.btn-default.active span {
     background: var(--darktheme-important) !important;
 }
 
+em.libelle-domaine {
+    background: var(--darktheme-focus) !important;
+    color: var(--darktheme-lfont) !important;
+}
+
 /* Login */
 #connexion {
     background-color: var(--darktheme-focus) !important;
